@@ -1,11 +1,12 @@
 <h1>Edit Recipe</h1>
-  <%= form_for @recipe do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control', placeholder: "Enter recipe title" %>
+  <div class="col-md-8">
+    <%= form_for @recipe do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control', placeholder: "Enter recipe title" %>
 
-    <%= f.label :body %>
-    <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter recipe body" %>
+      <%= f.label :body %>
+      <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter recipe body" %>
 
-    <%= f.submit "Save", class: 'btn btn-success' %>
-
-  <% end %>
+      <%= f.submit "Save", class: 'btn btn-success' %>
+    <% end %>
+  </div>

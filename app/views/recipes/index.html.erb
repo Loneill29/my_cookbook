@@ -1,7 +1,9 @@
-<h1>My Recipes</h1>
-
-<%= link_to "New", new_recipe_path(@recipe), class: 'btn btn-success' %>
-
-<% @recipes.each do |recipe| %>
-  <p><%= link_to recipe.title, recipe %></p>
-<% end %>
+<div class="col-md-8">
+  <h1>
+    My Recipes
+    <%= link_to "New", new_recipe_path(@recipe), class: 'btn btn-success' %>
+  </h1>
+  <% @recipes.each do |recipe| %>
+    <p><%= link_to recipe.title, recipe %></p>
+  <% end %>
+</div>

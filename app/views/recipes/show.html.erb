@@ -1,5 +1,7 @@
-<h1><%= @recipe.title %></h1>
-<p><%= @recipe.body %></p>
+<div class="col-md-8">
+  <h1><%= @recipe.title %></h1>
+  <p><%= @recipe.body %></p>
 
-<%= link_to "Edit", edit_recipe_path(@recipe), class: 'btn btn-success' %>
-<%= link_to "Delete", @recipe, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this recipe?'} %>
+  <%= link_to "Edit", edit_recipe_path(@recipe), class: 'btn btn-success' %>
+  <%= link_to "Delete", @recipe, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this recipe?'} %>
+</div>
