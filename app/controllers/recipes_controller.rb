@@ -53,5 +53,5 @@ class RecipesController < ApplicationController
       flash.now[:alert] = "There was an error deleting the recipe. Please try again."
       render :show
     end
-  end 
+  end
 end

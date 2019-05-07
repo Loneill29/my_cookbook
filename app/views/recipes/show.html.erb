@@ -1,5 +1,12 @@
 <div class="col-md-8">
   <h1><%= @recipe.title %></h1>
+
+  <h3>Ingredients:</h3>
+  <%= render @recipe.ingredients %>
+  <%= render 'ingredients/form', ingredient: Ingredient.new, recipe: @recipe %>
+
+
+  <h3>Instructions</h3>
   <p><%= @recipe.body %></p>
 
   <%= link_to "Edit", edit_recipe_path(@recipe), class: 'btn btn-success' %>

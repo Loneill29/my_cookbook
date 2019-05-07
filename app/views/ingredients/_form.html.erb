@@ -1,0 +1,11 @@
+<br>
+<div>
+  <h4>Add ingredient</h4>
+  <%= form_for [recipe, ingredient] do |f| %>
+    <div class="form-group">
+      <%= f.label :body, class: 'sr-only' %>
+      <%= f.text_field :body, class: 'form-control', placeholder: "Ingredient" %>
+    </div>
+    <%= f.submit "+", class: 'btn btn-primary pull-right' %>
+  <% end %>
+</div>

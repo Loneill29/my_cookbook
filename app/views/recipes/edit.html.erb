@@ -4,6 +4,9 @@
       <%= f.label :title %>
       <%= f.text_field :title, class: 'form-control', placeholder: "Enter recipe title" %>
 
+
+      <%= render 'ingredients/form', ingredient: Ingredient.new, recipe: @recipe %>
+
       <%= f.label :body %>
       <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter recipe body" %>
 
