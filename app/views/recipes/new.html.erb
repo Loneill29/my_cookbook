@@ -4,8 +4,11 @@
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control', placeholder: "Recipe title" %>
 
+    <%= f.label :ingredient %>
+    <%= f.text_area :ingredient, rows: 8, class: 'form-control', placeholder: "ingredient" %>
+
     <%= f.label :body %>
-    <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Recipe body" %>
+    <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Instructions" %>
 
     <%= f.submit "Save" %>
   <% end %>

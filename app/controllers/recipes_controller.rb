@@ -14,6 +14,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new
     @recipe.title = params[:recipe][:title]
+    @recipe.ingredient = params[:recipe][:ingredient]
     @recipe.body = params[:recipe][:body]
 
     if @recipe.save
@@ -32,6 +33,7 @@ class RecipesController < ApplicationController
   def update
     @recipe = Recipe.find(params[:id])
     @recipe.title = params[:recipe][:title]
+    @recipe.ingredient = params[:recipe][:ingredient]
     @recipe.body = params[:recipe][:body]
 
     if @recipe.save
@@ -53,5 +55,5 @@ class RecipesController < ApplicationController
       flash.now[:alert] = "There was an error deleting the recipe. Please try again."
       render :show
     end
-  end 
+  end
 end
