@@ -10,15 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_180518) do
+ActiveRecord::Schema.define(version: 2019_05_08_134531) do
 
-  create_table "recipes", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "ingredient"
   end
+
+  create_table "ingredients", force: :cascade do |t|
+    t.text "body"
+    t.integer "recipe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_ingredients_on_recipe_id"
+  end
+
+# Could not dump table "recipes" because of following StandardError
+#   Unknown type 'category' for column 'references'
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

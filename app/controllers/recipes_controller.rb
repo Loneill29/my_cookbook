@@ -8,18 +8,22 @@ class RecipesController < ApplicationController
   end
 
   def new
+    @category = Category.find(params[:category_id])
     @recipe = Recipe.new
   end
 
   def create
+    @category = Category.find(params[:category_id])
     @recipe = Recipe.new
     @recipe.title = params[:recipe][:title]
     @recipe.ingredient = params[:recipe][:ingredient]
     @recipe.body = params[:recipe][:body]
 
+    @recipe.category = @category
+
     if @recipe.save
       flash[:notice] = "Recipe was saved."
-      redirect_to @recipe
+      redirect_to [@category, @recipe]
     else
       flash.now[:alert] = "There was an error saving the recipe. Please try again."
       render :new
@@ -38,7 +42,7 @@ class RecipesController < ApplicationController
 
     if @recipe.save
       flash[:notice] = "Recipe was updated."
-      redirect_to @recipe
+      redirect_to [@recipe.category, @recipe]
     else
       flash.now[:alert] = "There was an error updating the recipe. Please try again."
       render :edit
@@ -50,7 +54,7 @@ class RecipesController < ApplicationController
 
     if @recipe.destroy
       flash[:notice] = "Recipe was deleted successfully."
-      redirect_to recipes_path
+      redirect_to @recipe.category
     else
       flash.now[:alert] = "There was an error deleting the recipe. Please try again."
       render :show
