@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = Recipe.all
+    @q = Recipe.ransack(params[:q])
+    @recipes = @q.result(distinct: true)
   end
 
   def show

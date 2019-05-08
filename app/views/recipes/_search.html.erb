@@ -1,0 +1,18 @@
+<%= search_form_for @q do |f| %>
+  <%= f.search_field :title_cont %>
+  <%= f.submit %>
+<% end %>
+
+<table>
+  <tbody>
+    <% if params[:q] %>
+      <% @recipes.each do |recipe| %>
+        <tr>
+          <td class="search-result">
+            <%=link_to recipe.title, recipe %>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
