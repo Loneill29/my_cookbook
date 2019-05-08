@@ -1,11 +1,11 @@
 <div class="col-md-8">
-  <h1><%= @recipe.title %></h1>
+  <h1><%= markdown(@recipe.title) %></h1>
 
   <h3>Ingredients:</h3>
-  <p><%= @recipe.ingredient %></p>
+  <p><%= markdown(@recipe.ingredient) %></p>
 
   <h3>Instructions</h3>
-  <p><%= @recipe.body %></p>
+  <p><%= markdown(@recipe.body) %></p>
 
   <%= link_to "Edit", edit_recipe_path(@recipe), class: 'btn btn-success' %>
   <%= link_to "Delete", @recipe, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this recipe?'} %>
