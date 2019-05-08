@@ -38,6 +38,8 @@ gem 'devise'
 
 gem 'redcarpet'
 
+gem 'ransack'
+
 gem 'bootstrap-sass'
 
 group :development, :test do

@@ -1,6 +1,8 @@
 class CategoriesController < ApplicationController
+
   def index
-    @categories = Category.all
+      @q = Category.ransack(params[:q])
+      @categories = @q.result(distinct: true)
   end
 
   def show
@@ -48,6 +50,6 @@ class CategoriesController < ApplicationController
     else
       flash.now[:alert] = "There was an error deleting the category."
       render :show
-    end 
+    end
   end
 end
