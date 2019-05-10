@@ -1,13 +1,14 @@
-<div class="col-md-8">
-  <%= @category.name %>
-  <%= link_to "Edit Category", edit_category_path, class: 'btn btn-success' %>
-  <%= link_to "Delete Category", @category, method: :delete, class: 'btn btn-danger' %>
+<div class="col-md-8-offset-2">
+  <%= link_to "+", new_category_recipe_path(@category), class: 'btn btn-default add', title: "Add Recipe" %>
+
+  <h1><%= @category.name %></h1>
+  <div class="edit-delete">
+    <%= link_to "Edit Category", edit_category_path, class: 'btn btn-default' %>
+    <%= link_to "Delete Category", @category, method: :delete, class: 'btn btn-danger' %>
+  </div>
   <div class="recipes">
     <% @category.recipes.each do |recipe| %>
       <%= render partial: 'recipes/recipe', locals: { recipe: recipe } %>
-      <hr>
     <% end %>
   </div>
-
-  <%= link_to "Add Recipe", new_category_recipe_path(@category), class: 'btn btn-success' %>
 </div>

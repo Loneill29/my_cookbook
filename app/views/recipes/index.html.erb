@@ -1,10 +1,15 @@
-<div class="col-md-8">
+<div class="col-md-8-offset-2">
   <h1>
     All Recipes
   </h1>
-  <%= render partial: 'search', locals: { recipe: @recipe}  %>
 
-  <% @recipes.each do |recipe| %>
-    <p><%= link_to recipe.title, recipe.category %></p>
+    <%= render partial: 'search', locals: { recipe: @recipe}  %>
+
+    <% if !params[:q] %>
+  <div class="all-recipes">
+    <% @recipes.each do |recipe| %>
+      <p><%= link_to recipe.title, recipe %></p>
+    <% end %>
   <% end %>
+  </div>
 </div>

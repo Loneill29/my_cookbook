@@ -18,8 +18,128 @@
 
 .jumbotron {
   text-align: center;
+  background: #ffff!important;
+}
+
+.jumbotron h1 {
+  color: #3ab0b7
+}
+
+body {
+  background: #f5f5f5;
 }
 
 .search-result a {
-  color: red;
+  color: #000000;
+  font-weight: bold;
+}
+
+.search-input {
+  border-radius: 3px;
+}
+
+table {
+  margin-top: 60px;
+}
+
+.search .btn {
+  padding-top: 3px!important;
+  padding-bottom: 3px!important
+}
+
+.search {
+  float: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.btn-default {
+  background:#3ab0b7;
+  border-color: #3ab0b7;
+  color:#ffff;
+  font-weight: bold;
+}
+
+.btn-danger {
+  background: #d06a67;
+  font-weight: bold;
+  border-color: #d06a67;
+}
+
+h1 {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.title .btn {
+  float: right;
+  margin-top: 20px;
+}
+
+.edit-delete {
+  text-align: center;
+}
+
+.categories {
+  margin-top: 80px;
+}
+
+.col-md-8-offset-2 {
+  padding: 20px;
+  border-radius: 5px;
+  background: white;
+  width: 600px;
+  margin: auto;
+}
+
+.containter {
+  margin-left: 0!important;
+  margin-right: 0!important;
+}
+.nav {
+  margin-bottom: 40px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.nav, .signin {
+  background:#1c1c1c;
+  color: #ffff;
+}
+
+.signin a, .nav a {
+  color: #ffff;
+}
+
+.signin {
+  float: right;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.nav a:hover {
+  color: #000000!important;
+}
+
+a {
+  color:#1c1c1c
+}
+
+.all-recipes a {
+  font-weight: bold;
+}
+
+.add {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding-top: 0;
+  font-size: 25px;
+}
+
+.recipes {
+  padding-top: 60px;
 }
