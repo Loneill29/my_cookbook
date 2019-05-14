@@ -8,7 +8,7 @@
     <% if !params[:q] %>
   <div class="all-recipes">
     <% @recipes.each do |recipe| %>
-      <p><%= link_to recipe.title, recipe %></p>
+      <h4><%= link_to recipe.title, recipe %></h4>
     <% end %>
   <% end %>
   </div>
