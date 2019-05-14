@@ -17,6 +17,7 @@ class RecipesController < ApplicationController
     @category = Category.find(params[:category_id])
     @recipe = Recipe.new
     @recipe.title = params[:recipe][:title]
+    @recipe.photo = params[:recipe][:photo]
     @recipe.ingredient = params[:recipe][:ingredient]
     @recipe.body = params[:recipe][:body]
 
@@ -38,6 +39,7 @@ class RecipesController < ApplicationController
   def update
     @recipe = Recipe.find(params[:id])
     @recipe.title = params[:recipe][:title]
+    @recipe.photo = params[:recipe][:photo]
     @recipe.ingredient = params[:recipe][:ingredient]
     @recipe.body = params[:recipe][:body]
 

@@ -5,6 +5,12 @@
     <%= link_to "Delete", [@recipe.category, @recipe], method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this recipe?'} %>
   </div>
 
+  <% if @recipe.photo.attached? %>
+    <div class="recipe-photo">
+      <image class="photo" src="<%= (url_for(@recipe.photo)) %>">
+    </div>
+<% end %>
+
   <h3 class="recipes">Ingredients:</h3>
   <p><%= markdown(@recipe.ingredient) %></p>
 
