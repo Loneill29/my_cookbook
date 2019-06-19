@@ -187,3 +187,29 @@ a {
   max-width: 400px!important;
   max-height: 400px!important;
 }
+
+//Devise//
+
+.password, .email, .remember-me, .cancel {
+  margin-top: 10px;
+}
+
+.login input, .cancel input {
+  background-color: transparent!important;
+  border: none!important;
+}
+
+.login {
+  margin-top: 10px;
+}
+
+.cancel {
+  background-color: #829192!important;
+  border-color: #829192!important;
+}
+
+.sign-in {
+  background-color: #ffff!important;
+  padding: 20px;
+  border-radius: 5px;
+}
